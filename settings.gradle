@@ -1,0 +1,2 @@
+rootProject.name = "MonTodo"
+include ':app'
