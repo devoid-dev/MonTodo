@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MonTodo</string>
+    <string name="add_task_desc">Add a new task</string>
+    <string name="no_tasks">You have no tasks</string>
 </resources>
