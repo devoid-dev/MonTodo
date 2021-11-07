@@ -2,4 +2,13 @@
     <string name="app_name">MonTodo</string>
     <string name="add_task_desc">Add a new task</string>
     <string name="no_tasks">You have no tasks</string>
+    <string name="new_task">New task</string>
+    <string name="task_name_hint">Name</string>
+    <string name="cancel">Cancel</string>
+    <string name="add">Add</string>
+    <plurals name="you_have_tasks_to_do">
+        <item quantity="zero">You have %d task to do</item>
+        <item quantity="one">You have %d task to do</item>
+        <item quantity="other">You have %d tasks to do</item>
+    </plurals>
 </resources>
