@@ -14,6 +14,8 @@ class TodoItemListAdapter(private val onTodoItemCheckListener: OnTodoItemCheckLi
     ListAdapter<TodoItem, TodoItemListAdapter.ViewHolder>(DIFF_CALLBACK) {
 
     companion object {
+
+        //Callback qui va permettre à DiffUtil de comparer des items, et d'optimiser la mise à jour des vues.
         private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<TodoItem>() {
 
             override fun areItemsTheSame(oldItem: TodoItem, newItem: TodoItem): Boolean {
@@ -41,6 +43,7 @@ class TodoItemListAdapter(private val onTodoItemCheckListener: OnTodoItemCheckLi
         RecyclerView.ViewHolder(itemView) {
         private val binding = TodoItemBinding.bind(itemView)
 
+        //Va être appelé pour mettre à jour les vues en fonction des données en entrées (TodoItem)
         fun bind(todoItem: TodoItem) {
             val todoChecked = todoItem.doneAt != null
             binding.ivTaskDone.setImageResource(

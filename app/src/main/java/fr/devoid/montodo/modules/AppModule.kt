@@ -11,6 +11,7 @@ import fr.devoid.montodo.data.local.TodoDatabase
 import fr.devoid.montodo.data.local.TodoItemDao
 import javax.inject.Singleton
 
+//Une classe qui indique à Hilt comment instancier des classes
 @Module
 @InstallIn(SingletonComponent::class)
 class AppModule {

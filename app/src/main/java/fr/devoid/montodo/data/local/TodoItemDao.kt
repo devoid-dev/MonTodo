@@ -4,6 +4,7 @@ import androidx.room.*
 import fr.devoid.montodo.data.TodoItem
 import kotlinx.coroutines.flow.Flow
 
+//Va nous permettre d'interagir avec notre base de données
 @Dao
 interface TodoItemDao {
 

@@ -49,8 +49,11 @@ class MainActivity : AppCompatActivity(), TodoItemListAdapter.OnTodoItemCheckLis
     private fun setupTodoList() {
         binding?.rvTodoList?.adapter = todoItemListAdapter
         binding?.rvTodoList?.layoutManager = LinearLayoutManager(this)
+
+        //Ajout d'un DividerItemDecoration pour avoir une ligne entre chaque Item
         binding?.rvTodoList?.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.VERTICAL))
 
+        //Permet d'ajouter la fonctionnalité de "SWIPE" à un recyclerview
         ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {
 
             override fun onMove(
