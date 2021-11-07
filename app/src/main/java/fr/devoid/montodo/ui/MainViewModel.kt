@@ -32,4 +32,21 @@ class MainViewModel @Inject constructor(
         todoRepository.deleteTodo(todoItem)
     }
 
+    fun onAddTodoItem(taskText: String) {
+        val cleanTaskText = taskText.trim()
+
+        if (cleanTaskText != "") {
+            viewModelScope.launch(Dispatchers.IO) {
+                val newTodoItem = TodoItem(
+                    null,
+                    cleanTaskText,
+                    System.currentTimeMillis(),
+                    null
+                )
+
+                todoRepository.insertTodo(newTodoItem)
+            }
+        }
+    }
+
 }
